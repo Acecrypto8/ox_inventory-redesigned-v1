@@ -21,7 +21,7 @@ const VAR_DEFINITIONS = [
   { label: 'Tertiary Color', var: '--tertiaryColor', type: 'color', default: 'rgba(19, 87, 77, 0.94)' },
   { label: 'Text Color', var: '--textColor', type: 'color', default: 'rgba(255,255, 255, 0.84)' },
   { label: 'Item Labels', var: '--ItemNamesHidden', type: 'toggle', default: 'visible' },
-  { label: 'Hover Anims', var: '--HoverAnims', type: 'toggle', default: 'visible' },
+  { label: 'Item Weight', var: '--SlotWeight', type: 'toggle', default: 'visible' },
 ];
 
 function parseColor(input: string | undefined) {

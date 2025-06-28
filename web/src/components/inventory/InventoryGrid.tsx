@@ -37,6 +37,17 @@ const InventoryGrid: React.FC<InventoryGridProps> = ({ inventory }) => {
 
   // Remaining items (or all if no split)
   const remainingItems = shouldSplitFirstFive ? visibleItems.slice(5) : visibleItems;
+    // Handle Different Icons for different inventory types
+type InventoryType = 'shop' | 'crafting' | 'stash' | string;
+
+const inventoryIcons: Record<InventoryType, string> = {
+  shop: 'fa-duotone fa-solid fa-shopping-cart',
+  crafting: 'fa-duotone fa-solid fa-hammer',
+  stash: 'fa-duotone fa-solid fa-box-open',
+  default: 'fa-duotone fa-solid fa-circle-user',
+};
+
+const iconClass = inventoryIcons[inventory.type as InventoryType] || inventoryIcons.default;
 
   useEffect(() => {
     if (entry && entry.isIntersecting) {
@@ -52,7 +63,7 @@ const InventoryGrid: React.FC<InventoryGridProps> = ({ inventory }) => {
 <div className="ace-weight-bar">
   <div className="inventory-grid-header-wrapper">
     <div className="username-wrapper">
-        <i className="fa-solid fa-circle-user"></i>
+        <i className={iconClass}></i>
         <p>{inventory.label}</p>
     </div>
     {inventory.maxWeight && (

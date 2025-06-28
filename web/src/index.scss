@@ -6,7 +6,7 @@
   --mainFont: Roboto;
   --BigNumberFont: Anton;
   --ItemNamesHidden : visible;
-  --HoverAnims: visible;
+  --SlotWeight: visible;
 }
 
 $gridCols: 5;
@@ -396,9 +396,14 @@ button:active {
   align-self: flex-end;
   padding: 3px;
   gap: 3px;
+
   p {
     font-size: 12px;
   }
+}
+
+.item-weight {
+  visibility: var(--SlotWeight);
 }
 
 .item-slot-currency-wrapper {
