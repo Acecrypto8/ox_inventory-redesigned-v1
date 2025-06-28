@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDrop } from 'react-dnd';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { selectItemAmount, setItemAmount } from '../../store/inventory';
@@ -10,6 +10,31 @@ import { Locale } from '../../store/locale';
 import UsefulControls from './UsefulControls';
 import AceUiControls from './AceEditUi';
 import { url } from 'inspector';
+
+const InventoryLogo = () => {
+  const [exists, setExists] = useState(false);
+  const imgUrl = 'public/ServerLogo/ServerLogo.png'; // Correct public path
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch(imgUrl, { method: 'HEAD' })
+      .then(res => {
+        if (isMounted) setExists(res.ok);
+      })
+      .catch(() => {
+        if (isMounted) setExists(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  return exists ? <img src={imgUrl} alt="Logo" style={{ width: '120px', height: 'auto', borderRadius: '5px' }}/> : null;
+};
+
+
 
 const InventoryControl: React.FC = () => {
   const itemAmount = useAppSelector(selectItemAmount);
@@ -47,6 +72,7 @@ const InventoryControl: React.FC = () => {
       <AceUiControls infoVisible={editVisible} setInfoVisible={setEditVisible} />
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
+          <InventoryLogo />
           <input
             className="inventory-control-input"
             type="number"
