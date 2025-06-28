@@ -1,19 +1,12 @@
-# ox_inventory
+# Redesign By AceCrypto & Qb-Core Compatibility
+
+A Complete UI redesign of the ox_inventory and also Qb-Core framework compatibility
+
+> If you need help my discord: acecrypto
+
+# Latest ox_inventory
 
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
-
-![](https://img.shields.io/github/downloads/communityox/ox_inventory/total?logo=github)
-![](https://img.shields.io/github/downloads/communityox/ox_inventory/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/communityox/ox_inventory?logo=github)
-![](https://img.shields.io/github/v/release/communityox/ox_inventory?logo=github)
-
-## 📚 Documentation
-
-https://coxdocs.dev/ox_inventory
-
-## 💾 Download
-
-https://github.com/communityox/ox_inventory/releases/latest/download/ox_inventory.zip
 
 ## Supported frameworks
 
@@ -21,6 +14,7 @@ We do not guarantee compatibility or support for third-party resources.
 
 - [ox_core](https://github.com/communityox/ox_core)
 - [esx](https://github.com/esx-framework/esx_core)
+- [qb](https://github.com/qbcore-framework/qb-core)
 - [qbox](https://github.com/Qbox-project/qbx_core)
 - [nd_core](https://github.com/ND-Framework/ND_Core)
 
