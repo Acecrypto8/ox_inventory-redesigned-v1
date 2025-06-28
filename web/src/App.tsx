@@ -22,7 +22,7 @@ debugData([
         slots: 50,
         label: 'Bob Smith',
         weight: 3000,
-        maxWeight: 8000,
+        maxWeight: 1000,
         items: [
           {
             slot: 1,
@@ -37,7 +37,7 @@ debugData([
             },
             count: 5,
           },
-          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 } },
+          { slot: 2, name: 'powersaw', weight: 1, count: 1, metadata: { durability: 75 } },
           { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' } },
           {
             slot: 4,

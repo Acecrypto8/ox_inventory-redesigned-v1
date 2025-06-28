@@ -9,6 +9,7 @@ import {
   useTransitionStyles,
 } from '@floating-ui/react';
 import { RgbaColorPicker } from 'react-colorful';
+import { size } from 'lodash';
 
 interface Props {
   infoVisible: boolean;
@@ -22,7 +23,44 @@ const VAR_DEFINITIONS = [
   { label: 'Text Color', var: '--textColor', type: 'color', default: 'rgba(255,255, 255, 0.84)' },
   { label: 'Item Labels', var: '--ItemNamesHidden', type: 'toggle', default: 'visible' },
   { label: 'Item Weight', var: '--SlotWeight', type: 'toggle', default: 'visible' },
+  { label: 'Font Family', var: '--DynamicFont', type: 'font', default: "'Anton', sans-serif" },
 ];
+
+interface FontMeta {
+  font: string;
+  weight: string;
+  size: string;
+}
+
+const FONT_OPTIONS: Record<string, FontMeta> = {
+  'Anton': {
+    font: "'Anton', sans-serif",
+    weight: '',
+    size: '16px',
+  },
+  'Orbitron': {
+    font: "'Orbitron', sans-serif",
+    weight: '400',
+    size: '18px',
+  },
+  'Press Start 2P': {
+    font: "'Press Start 2P', cursive",
+    weight: '400',
+    size: '16px',
+  },
+  'Manufacturing Consent': {
+    font: "'Manufacturing Consent', system-ui",
+    weight: '400',
+    size: '22px',
+  },
+  'Fredoka': {
+    font: "'Fredoka', sans-serif",
+    weight: '200',
+    size: '20px',
+  },
+};
+
+
 
 function parseColor(input: string | undefined) {
   if (typeof input !== 'string') return { r: 0, g: 0, b: 0, a: 1 };
@@ -92,9 +130,28 @@ useEffect(() => {
 }, [vars]);
 
 
-  const handleChange = (variable: string, value: string) => {
-    setVars((prev) => ({ ...prev, [variable]: value }));
-  };
+const handleChange = (variable: string, value: string) => {
+  if (variable === '--DynamicFont') {
+    const selectedFontEntry = Object.entries(FONT_OPTIONS).find(
+      ([, meta]) => meta.font === value
+    );
+
+    if (selectedFontEntry) {
+      const [, meta] = selectedFontEntry;
+
+      setVars((prev) => ({
+        ...prev,
+        [variable]: value,
+        '--DynamicFontSize': meta.size,
+        '--DynamicFontWeight': meta.weight,
+      }));
+      return;
+    }
+  }
+
+  setVars((prev) => ({ ...prev, [variable]: value }));
+};
+
 
   const onReset = () => {
     const resetVars: Record<string, string> = {};
@@ -132,6 +189,7 @@ useEffect(() => {
           >
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <h2 style={{ margin: 0, fontWeight: 600, fontSize: 22, letterSpacing: '0.03em' }}>Edit UI Theme - Made By AceCrypto</h2>
+              <img src="https://i.ibb.co/VWYnxMRR/Ace-Studios.png" alt="AceCrypto" style={{ width: '45px' }} />
               <button
                 onClick={() => setInfoVisible(false)}
                 aria-label="Close"
@@ -226,13 +284,11 @@ useEffect(() => {
                     >
                       {def.type === 'font' ? (
                         <>
-                          <option value="Roboto">Roboto</option>
-                          <option value="Anton">Anton</option>
-                          <option value="Arial">Arial</option>
-                          <option value="Courier New">Courier New</option>
-                          <option value="Verdana">Verdana</option>
-                          <option value="Georgia">Georgia</option>
-                          <option value="Tahoma">Tahoma</option>
+{Object.entries(FONT_OPTIONS).map(([key, meta]) => (
+        <option key={key} value={meta.font}>
+          {key}
+        </option>
+      ))}
                         </>
                       ) : (
                         <>

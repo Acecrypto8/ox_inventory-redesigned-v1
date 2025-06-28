@@ -9,6 +9,7 @@ import { fetchNui } from '../../utils/fetchNui';
 import { Locale } from '../../store/locale';
 import UsefulControls from './UsefulControls';
 import AceUiControls from './AceEditUi';
+import { url } from 'inspector';
 
 const InventoryControl: React.FC = () => {
   const itemAmount = useAppSelector(selectItemAmount);
@@ -73,9 +74,7 @@ const InventoryControl: React.FC = () => {
 
             {/* Button to open AceUiControls (Edit button) modal */}
       <button className="ace-ui-controls-button" onClick={() => setEditVisible(true)}>
-        <i className="fa-duotone fa-solid fa-pen-to-square" style={{ fontSize: '1.5em' }}>
-            <path d="M402.3 344.9l32.1-32.1 34.9 34.9-32.1 32.1c-4.7 4.7-12.3 4.7-17 0l-18-18c-4.7-4.7-4.7-12.3 0-17zm47.5-165.5l-46.6-46.6c-15-15-39.4-15-54.4 0l-241.9 241.9c-4.7 4.7-8.2 10.6-10.1 17.3l-18.8 63.1c-3 10.2 7.1 20.3 17.3 17.3l63.1-18.8c6.7-1.9 12.6-5.4 17.3-10.1l241.9-241.9c15-15 15-39.4 0-54.4z" />
-        </i>
+        <i className="fa-duotone fa-solid fa-pen-to-square" style={{ fontSize: '1.5em' }}></i>
       </button>
     </>
   );

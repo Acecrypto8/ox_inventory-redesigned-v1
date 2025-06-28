@@ -4,9 +4,13 @@
   --tertiaryColor: rgba(19, 78, 87, 0.94);
   --textColor: rgba(255,255,255,0.84);
   --mainFont: Roboto;
-  --BigNumberFont: Anton;
+  --BigNumberFont: 'Anton', sans-serif;
   --ItemNamesHidden : visible;
   --SlotWeight: visible;
+
+  --DynamicFont: 'Anton', sans-serif;
+  --DynamicFontSize: ;
+  --DynamicFontWeight: ;
 }
 
 $gridCols: 5;
@@ -286,6 +290,9 @@ button:active {
   justify-content: space-between;
   p {
     font-size: 16px;
+    font-family: var(--DynamicFont)!important;
+    font-size: var(--DynamicFontSize)!important;
+    font-weight: var(--DynamicFontWeight)!important;
   }
 
   .username-wrapper {
@@ -397,8 +404,12 @@ button:active {
   padding: 3px;
   gap: 3px;
 
+
   p {
-    font-size: 12px;
+    font-size: 11px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    padding: 2px;
   }
 }
 

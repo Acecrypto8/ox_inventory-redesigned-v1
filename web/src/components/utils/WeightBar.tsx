@@ -15,7 +15,7 @@ const colorMixer = (rgbA: number[], rgbB: number[], amountToMix: number) => {
 
 const COLORS = {
   primaryColor: [231, 76, 60],       // Red (Pomegranate) — Good for damage/alerts
-  secondColor: [255, 193, 7],        // Amber — Excellent for durability on dark UI
+  secondColor: [0, 255, 85],        // Amber — Excellent for durability on dark UI
   accentColor: [255, 87, 34],        // Deep Orange — Pops well on dark backgrounds
 };
 
