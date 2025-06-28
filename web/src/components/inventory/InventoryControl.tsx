@@ -13,7 +13,7 @@ import { url } from 'inspector';
 
 const InventoryLogo = () => {
   const [exists, setExists] = useState(false);
-  const imgUrl = 'public/ServerLogo/ServerLogo.png'; // Correct public path
+  const imgUrl = './ServerLogo/ServerLogo.png'; // Correct public path
 
   useEffect(() => {
     let isMounted = true;
