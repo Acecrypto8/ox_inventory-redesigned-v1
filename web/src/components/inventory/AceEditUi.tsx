@@ -16,9 +16,9 @@ interface Props {
 }
 
 const VAR_DEFINITIONS = [
-  { label: 'Main Color', var: '--mainColor', type: 'color', default: 'rgba(19, 87, 77, 0.48)' },
+  { label: 'Main Color', var: '--mainColor', type: 'color', default: 'rgba(19, 72, 87, 0.56)' },
   { label: 'Secondary Color', var: '--secondaryColor', type: 'color', default: 'rgba(82, 255, 231, 0.28)' },
-  { label: 'Tertiary Color', var: '--tertiaryColor', type: 'color', default: 'rgba(19, 87, 77, 0.94)' },
+  { label: 'Tertiary Color', var: '--tertiaryColor', type: 'color', default: 'rgba(19, 78, 87, 0.94)' },
   { label: 'Text Color', var: '--textColor', type: 'color', default: 'rgba(255,255, 255, 0.84)' },
   { label: 'Item Labels', var: '--ItemNamesHidden', type: 'toggle', default: 'visible' },
   { label: 'Item Weight', var: '--SlotWeight', type: 'toggle', default: 'visible' },
