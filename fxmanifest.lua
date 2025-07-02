@@ -3,8 +3,8 @@ use_experimental_fxv2_oal 'yes'
 lua54 'yes'
 game 'gta5'
 name 'ox_inventory'
-author 'Overextended'
-version '2.44.4'
+author 'Overextended | AceCrypto'
+version '2.44.4' -- Latest version from (Community OX)
 repository 'https://github.com/communityox/ox_inventory'
 description 'Slot-based inventory with item metadata support'
 
@@ -45,3 +45,6 @@ files {
     'modules/bridge/**/client.lua',
     'data/*.lua',
 }
+
+
+-- Edited by AceCrypto
