@@ -233,6 +233,13 @@ if shared.target and GetResourceState('ox_target') ~= 'started' then
     warn('ox_target is not loaded - it should start before ox_inventory')
 end
 
+if GetCurrentResourceName() ~= 'ox_inventory' then
+    return spamError(string.format(
+        'The resource should be named "ox_inventory", current name: %s',
+        GetCurrentResourceName()
+    ))
+end
+
 if lib.context == 'server' then
     shared.ready = false
     return require 'server'
