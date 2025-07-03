@@ -37,6 +37,7 @@ files {
     'server.lua',
     'locales/*.json',
     'web/build/index.html',
+    'web/build/ServerLogo/ServerLogo.png',
     'web/build/assets/*.js',
     'web/build/assets/*.css',
     'web/images/*.png',
