@@ -2,6 +2,8 @@
 
 A Complete UI redesign of the ox_inventory and also Qb-Core framework compatibility
 
+Preview: https://www.youtube.com/watch?v=kpNCUUHsNxk
+
 > If you need help my discord: acecrypto
 
 # Latest ox_inventory
