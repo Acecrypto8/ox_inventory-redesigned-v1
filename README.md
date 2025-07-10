@@ -7,6 +7,7 @@ A Complete UI redesign of the ox_inventory and also Qb-Core framework compatibil
 # Latest ox_inventory
 
 ![Total Downloads](https://img.shields.io/github/downloads/Acecrypto8/ox_inventory-redesigned-v1/total?logo=github)
+![Latest Downloads](https://img.shields.io/github/downloads/Acecrypto8/ox_inventory-redesigned-v1/latest/total?logo=github)
 ![Latest Release](https://img.shields.io/github/v/release/Acecrypto8/ox_inventory-redesigned-v1?logo=github)
 
 
