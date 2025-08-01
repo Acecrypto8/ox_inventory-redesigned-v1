@@ -5,7 +5,8 @@ A Complete UI redesign of the ox_inventory and also Qb-Core framework compatibil
 Preview: https://www.youtube.com/watch?v=kpNCUUHsNxk
 
 > If you need help my discord: acecrypto
-> If you decide to support me, please make sure to contact me on discord also. i would love to chat with you!
+
+> **If you decide to support me, please make sure to contact me on discord also. i would love to chat with you!**
 
 <img width="1115" height="564" alt="InvPic1" src="https://github.com/user-attachments/assets/6f530c72-677d-409e-a6c8-22ddf495c560" />
 <img width="1110" height="650" alt="InvPic2" src="https://github.com/user-attachments/assets/909ac001-d611-4119-945c-0be93fd8e770" />
